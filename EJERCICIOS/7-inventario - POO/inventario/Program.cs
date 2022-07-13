@@ -29,7 +29,7 @@ namespace inventario
                         inventario.listarProductos();
                         break;
                     case "2":
-                        inventario.ingresoDeInventario(Console);
+                        inventario.ingresoDeInventario();
                         break; 
                     case "3": 
                         inventario.salidaDeInventario();

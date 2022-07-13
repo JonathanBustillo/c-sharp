@@ -50,7 +50,7 @@ public class Inventario
         }
     }
 
-    public void ingresoDeInventario(Console console) {
+    public void ingresoDeInventario() {
         string codigo = "";
         string cantidad = "";
 
@@ -62,7 +62,7 @@ public class Inventario
         Console.Write("Ingrese el codigo del producto: ");
         codigo = Console.ReadLine();
         Console.Write("Ingrese la cantidad del producto: ");
-        cantidad = console.ReadLine();
+        cantidad = Console.ReadLine();
 
         movimientoInventario(codigo, Int32.Parse(cantidad), "+");
     }
