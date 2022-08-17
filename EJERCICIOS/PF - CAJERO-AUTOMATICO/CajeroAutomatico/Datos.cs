@@ -10,6 +10,7 @@ namespace CajeroAutomatico
         {
             int opcion=0, saldo=0;
             string respuesta = "";
+            char sn;
 
             Console.WriteLine("Bienvenido al Cajero Automatico Atlantida");
 
@@ -22,13 +23,20 @@ namespace CajeroAutomatico
                 Calculos op = new Calculos ();
                 do
                 {
-                    Console.WriteLine("******************************");
-                    Console.WriteLine("\nSelecciona la Tr0ansaccion que Deseas Realizar:");
+                    Console.WriteLine("Operaciones Bancarias");
+                    Console.WriteLine("\nSelecciona la Transaccion que Deseas Realizar:");
                     Console.WriteLine("Su Saldo Inicial es de 2,500y solo puede Retirar 2,500");
                     Console.WriteLine("1. Consultar Saldo");
                     Console.WriteLine("2. Retirar Efectivo");
                     Console.WriteLine("3. Depositar");
                     Console.WriteLine("0. Salir");
+                    Console.WriteLine("Desea Realizar Otra Transaccion s/S n/N:");
+                    if (sn== 'S' || sn == 's')
+                    {
+                    }
+                    else 
+                    exit(0);
+                    
                     opcion = int.Parse(Console.ReadLine());
 
                     switch (opcion)
@@ -73,10 +81,9 @@ namespace CajeroAutomatico
                         break;
 
                     }
-                    Console.WriteLine("Desea volver a Intentarlo?, Presione ¨si¨ para continuar, presione cualquier tecla para finalizar");
+                    Console.WriteLine("Desea volver a Intentarlo?, Presione 'si' para continuar, presione cualquier tecla para finalizar");
 
-                }
-                while (respuesta == "SI" || respuesta == "si");
+                }while (respuesta == "SI" || respuesta == "si");
             }
             else 
             {
