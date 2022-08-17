@@ -30,12 +30,6 @@ namespace CajeroAutomatico
                     Console.WriteLine("2. Retirar Efectivo");
                     Console.WriteLine("3. Depositar");
                     Console.WriteLine("0. Salir");
-                    Console.WriteLine("Desea Realizar Otra Transaccion s/S n/N:");
-                    if (sn== 'S' || sn == 's')
-                    {
-                    }
-                    else 
-                    exit(0);
                     
                     opcion = int.Parse(Console.ReadLine());
 
@@ -81,7 +75,7 @@ namespace CajeroAutomatico
                         break;
 
                     }
-                    Console.WriteLine("Desea volver a Intentarlo?, Presione 'si' para continuar, presione cualquier tecla para finalizar");
+                    Console.WriteLine("Presione Cualquier Tecla para Finalizar");
 
                 }while (respuesta == "SI" || respuesta == "si");
             }
