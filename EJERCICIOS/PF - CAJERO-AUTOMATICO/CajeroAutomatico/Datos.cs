@@ -10,7 +10,7 @@ namespace CajeroAutomatico
         {
             int opcion=0, saldo=0;
             string respuesta = "";
-            char sn;
+
 
             Console.WriteLine("Bienvenido al Cajero Automatico Atlantida");
 
@@ -36,12 +36,16 @@ namespace CajeroAutomatico
                     switch (opcion)
                     {
                         case 1:
+                        {
+
                         Console.WriteLine("Consultar Saldo");
-                        Console.WriteLine("Su Saldo es de:");
+                        Console.WriteLine("Su Saldo es de:",saldo);
                         acceso.Consultar = int.Parse(Console.ReadLine());
                         break;
+                        }
 
                          case 2:
+                         {
                         Console.WriteLine("Retirar Efectivo");
                         Console.WriteLine("Ingrese la Cantidad a Retirar:");
                         acceso.Retirar = int.Parse(Console.ReadLine());
@@ -57,18 +61,23 @@ namespace CajeroAutomatico
                             Console.WriteLine("Su Saldo es:", saldo);
                         }
                         break;
+                         }
 
                          case 3:
+                         {
                         Console.WriteLine("Depositar");
                         Console.WriteLine("Ingrese la Cantidad a Depositar:");
                         acceso.Depositar = int.Parse(Console.ReadLine());
                         saldo = op.operacion(acceso.Depositar);
                         Console.WriteLine("Se Deposito Correctamente");
                         break;
+                         }
 
                         case 0:
+                        {
                         Console.WriteLine("Saliendo del Sistema");
                         break;
+                        }
 
                         default:
                         Console.WriteLine("Los Datos Ingresados son Incorrectos, Vuelva a Intentarlo");
